@@ -6,14 +6,14 @@ from .models import Progress
 class ProfileSerializer(serializers.ModelSerializer):
     class Meta:
         model = Profile
-        fields = ('id', 'realname', 'nickname', 'about')
+        fields = ('id', 'firstname', 'lastname', 'nickname', 'about')
 
 class PromiseSerializer(serializers.ModelSerializer):
     class Meta:
         model = Promise
-        fields = ('id', 'start_date', 'duration', 'target_heartbeats')
+        fields = ('id', 'charity_name', 'duration', 'target_heartbeats')
 
 class ProgressSerializer(serializers.ModelSerializer):
     class Meta:
         model = Progress
-        fields = ('id', 'current_heartbeats')
+        fields = ('id', 'start_date', 'current_heartbeats')
